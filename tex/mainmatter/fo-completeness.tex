@@ -269,7 +269,7 @@
                   $\mathcal{M},\alpha\vDash R(t_1, \mathellipsis,
                   t_n)$ iff $(\llbracket
                   t_1\rrbracket_\alpha^\mathcal{M}, \mathellipsis,
-                  \llbracket t_1\rrbracket_\alpha^\mathcal{M}) \in
+                  \llbracket t_n\rrbracket_\alpha^\mathcal{M}) \in
                   R^\mathcal{M}$. First, note that since
                   $c^\mathcal{M}=c^\mathcal{N}$ for all $c\in
                   \mathcal{C}$ and $f^\mathcal{M}=f^\mathcal{N}$ for
@@ -281,7 +281,7 @@
                   Since additionally  $R^\mathcal{M}=R^\mathcal{N}$,
                   we can conclude that $(\llbracket
                   t_1\rrbracket_\alpha^\mathcal{N}, \mathellipsis,
-                  \llbracket t_1\rrbracket_\alpha^\mathcal{N}) \in
+                  \llbracket t_n\rrbracket_\alpha^\mathcal{N}) \in
                   R^\mathcal{N}$, which is precisely the condition for
                   $\mathcal{N},\alpha\vDash R(t_1, \mathellipsis,
                   t_n)$.
@@ -342,7 +342,7 @@
                   faithful---which is just an iterated version of the
                   down preservation principle. Now in first-order
                   tableaux, things aren't \emph{quite} as simple,
-                  thought he general idea remains the same.
+                  though the general idea remains the same.
 
                   \item The
                   concept of a faithful valuation is generalized to
@@ -385,7 +385,7 @@
 
                     \begin{proof}
                       The proof proceeds, analogously to the proof of the
-                      soundness lemma in propositinal logic, by going
+                      soundness lemma in propositional logic, by going
                       through the rules one by one. Now, the
                       propositional rules, we can deal with exactly as
                       in propositional logic (replacing the talk of
@@ -454,7 +454,7 @@
                     D^\mathcal{M}$ such that
                     $\mathcal{M},\alpha[\alpha\mapsto d]\vDash
                     \phi$. Now, we define our model $\mathcal{N}$ just
-                    like $\mathcal{N}$, except that we set
+                    like $\mathcal{M}$, except that we set
                     $p^\mathcal{N}=d$. Now, note that by the
                     denotation lemma, it easily follows that
                     $\mathcal{N},\alpha\vDash
@@ -485,7 +485,7 @@
                         [{\varphi[x:=a]^\dagger} ]
                         ]
                       \end{prooftree}\quad\raisebox{-3ex}{{\small$\dagger$:
-                          $ta$ any ground term on the branch}}
+                          $a$ any ground term on the branch}}
 
                     \end{center}
                     Now, since $\mathcal{M}$ is faithful to $B$ and
@@ -562,13 +562,13 @@
                       to the initial list. Now, every time that we
                       apply a rule to construct the complete tableau,
                       we obtain \emph{a} model (possibly
-                      differet from $\mathcal{M}$) which is
+                      different from $\mathcal{M}$) which is
                       faithful to at least one branch of that
                       tree. This means that there exists a model
                       $\mathcal{N}$ which is faithful to some branch
                       in the complete tableau for
                       $\Gamma\cup\{\neg\phi\}$. Now reasoning by
-                      contradiction quickl shows that this branch
+                      contradiction quickly shows that this branch
                       cannot be closed. For suppose that it were. Then
                       there would be an atomic formula and its
                       negation on the branch, which would then both
@@ -627,7 +627,7 @@
                             \mathellipsis, t_n)$ iff $(\llbracket
                             t_1\rrbracket^{\mathcal{M}_B}_\alpha,
                             \mathellipsis, \llbracket
-                            t_1\rrbracket^{\mathcal{M}_B}_\alpha)\in
+                            t_n\rrbracket^{\mathcal{M}_B}_\alpha)\in
                             R^{\mathcal{M}_B}$. 
                             By the definition of $\mathcal{M}_B$, we
                             know that
@@ -654,7 +654,7 @@
                             we conclude that $(\llbracket
                             t_1\rrbracket^{\mathcal{M}_B}_\alpha,
                             \mathellipsis, \llbracket
-                            t_1\rrbracket^{\mathcal{M}_B}_\alpha)\notin
+                            t_n\rrbracket^{\mathcal{M}_B}_\alpha)\notin
                             R^{\mathcal{M}_B}$, which gives us
                             $\mathcal{M},\alpha\nvDash
                             R(t_1,\mathellipsis, t_n)$ as desired.
@@ -689,7 +689,7 @@
                              every rule that can be applied has been
                              applied. Since $t=t\in B$ for all
                              $t\in\mathcal{T}$, we can conclude that
-                             the $\forall \phi$ rule has been applied
+                             the $\forall x\phi$ rule has been applied
                              for $t$, i.e. for each $t\in\mathcal{T}$,
                              we have $(\phi)[x:=t]\in B$. Hence, by
                              the induction hypothesis,
@@ -714,7 +714,7 @@
                             \forall x\phi$ rule has been applied,
                             giving us that $\exists x\neg \phi\in
                             B$. Again, since the tableau is complete,
-                            we know that the $\exists$ rule has been
+                            we know that the $\exists x\phi$ rule has been
                             applied. This means that for some (at some
                             point fresh) parameter $p$, we have
                             $(\neg\phi)[x:=p]\in B$. We know that
@@ -789,7 +789,7 @@ Revisit the self study questions of ch. 7.6.
 \begin{itemize}
 \item The exercises for this chapter are different. We're getting
  close to the endterm exam and it's high-time that we think a bit more
- concretely about exam preparation. The exercises for this an next lecture will just be that: exam preparation.
+ concretely about exam preparation. The exercises for this and next lecture will just be that: exam preparation.
 
  \item In a moment, I will describe the ``recipe'' for the exam to you
 so that, in principle, you can make as many mock exams from the
@@ -886,7 +886,7 @@ scheme to allow you to gauge my expectations.
     \item $0^\mathcal{M}=1$
     \item $S^\mathcal{M}(n)=n+2$
     \item $+^\mathcal{M}(n,m)=\begin{cases} n+m & \text{if }
-        n+m\text{is odd}\\ n+m+1&\text{otherwise}\end{cases}$
+        n+m\text{ is odd}\\ n+m+1&\text{otherwise}\end{cases}$
       \item $\cdot^\mathcal{M}(n,m)=n\cdot m$
       
     \end{itemize}
@@ -908,7 +908,7 @@ scheme to allow you to gauge my expectations.
 
      Let $\alpha$ be an arbitrary assignment. Determine the
      truth-value of the following formula in this model under that
-     assignment: \[\forall x\forall y(R(x,y)\to R(f(y), f(x))\] 
+     assignment: \[\forall x\forall y(R(x,y)\to R(f(y), f(x)))\] 
 
    \item Show the following two derivability facts:
      
