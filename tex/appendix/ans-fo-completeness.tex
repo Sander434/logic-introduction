@@ -189,7 +189,7 @@ close with=\xmark
                           [{P(p)\to Q(p)}
                              [{\neg P(p)}, close ]
                              [{Q(p)}
-                                [{\neg Q(c)}, close]
+                                [{Q(c)}, close]
                              ]
                           ]      
                        ]
@@ -535,8 +535,8 @@ Hence the tableau is always closed, which is what we needed to show.
 
                     Now, consider the model $\mathcal{M}^-$ given by:
                     \begin{itemize}
-                    \item $D^{\mathcal{M}^+}=\{\ast\}$
-                    \item $R^{\mathcal{M}^+}=\emptyset$
+                    \item $D^{\mathcal{M}^-}=\{\ast\}$
+                    \item $R^{\mathcal{M}^-}=\emptyset$
                     \end{itemize}
                    As in the case of $\mathcal{M}^+$, we can infer
                    that $\mathcal{M}^-,\alpha\vDash
@@ -690,7 +690,7 @@ Hence the tableau is always closed, which is what we needed to show.
                     $\phi$ with only $x$ free, $(\phi)[x:=c]$ is a
                     sentence.
 
-                    \item We're essentially asked to show that for all
+                    \item[11.7.8] We're essentially asked to show that for all
                       models $\mathcal{M}$ and assignments $\alpha$,
                       we have 
                       $\mathcal{M},\alpha\vDash \forall xR(x,x)$ iff
@@ -735,21 +735,21 @@ Hence the tableau is always closed, which is what we needed to show.
                         x\rrbracket^\mathcal{M}_{\alpha[x\mapsto
                           d]})=(d,d)\in R^\mathcal{M}$. 
 
-                        \item[11.7.9]. We're asked to show that in the
+                        \item[11.7.9] We're asked to show that in the
                           given model $\mathcal{M}$ we have
                           \[\mathcal{M},\alpha\vDash \exists xP(x)\to
-                          P(a)\lor P(b)\lor P(b)\] for each
+                          P(a)\lor P(b)\lor P(c)\] for each
                           $\alpha$. We know that, by definition, $\mathcal{M},\alpha\vDash \exists xP(x)\to
-                          P(a)\lor P(b)\lor P(b)$ iff either (i)
+                          P(a)\lor P(b)\lor P(c)$ iff either (i)
                           $\mathcal{M},\alpha\nvDash \exists xP(x)$ or (ii)
                           $\mathcal{M},\alpha\vDash
-                          P(a)\lor P(b)\lor P(b)$. Now clearly, we
+                          P(a)\lor P(b)\lor P(c)$. Now clearly, we
                           either have (a) $\mathcal{M},\alpha\vDash
                           \exists xP(x)$ or (b)
                           $\mathcal{M},\alpha\nvDash \exists xP(x)$ by
                           bivalence. In case (b), we can immediately
                           infer that $\mathcal{M},\alpha\vDash \exists xP(x)\to
-                          P(a)\lor P(b)\lor P(b)$, so we focus on case
+                          P(a)\lor P(b)\lor P(c)$, so we focus on case
                           (a). Suppose that $\mathcal{M},\alpha\vDash
                           \exists xP(x)$. This means, by definition,
                           that there exists a $d\in D^\mathcal{M}$
@@ -766,41 +766,41 @@ Hence the tableau is always closed, which is what we needed to show.
                            P(a)$. But if $\mathcal{M},\alpha\vDash 
                            P(a)$, then $\mathcal{M},\alpha\vDash 
                            P(a)\lor P(b)\lor P(c)$ and so $\mathcal{M},\alpha\vDash \exists xP(x)\to
-                          P(a)\lor P(b)\lor P(b)$ by (ii), as
+                          P(a)\lor P(b)\lor P(c)$ by (ii), as
                           desired. If $d=2,3$, we can give the same,
                           analogous argument using the denotation
                           lemma. So, either way,  $\mathcal{M},\alpha\vDash \exists xP(x)\to
-                          P(a)\lor P(b)\lor P(b)$, as desired.
+                          P(a)\lor P(b)\lor P(c)$, as desired.
 
                           \item[11.7.10] We're asked to prove that if
-                            $\phi\vdash\psi$ and $\psi\vdash\phi$,
-                            then $\phi\vdash\psi$. There are many
+                            $\phi\vdash\psi$ and $\psi\vdash\theta$,
+                            then $\phi\vdash\theta$. There are many
                             different ways we could do this, but I'll
                             use soundness and completeness. First,
                             I'll show my (Lemma) that  if
-                            $\phi\vDash\psi$ and $\psi\vDash\phi$,
-                            then $\phi\vDash\psi$.\footnote{We
+                            $\phi\vDash\psi$ and $\psi\vDash\theta$,
+                            then $\phi\vDash\theta$.\footnote{We
                               actually proved this in class, so you
                               could, in principle just use this
                               without proof.} For suppose that
                             $\phi\vDash\psi$ and
-                            $\psi\vDash\phi$. By definition, this
+                            $\psi\vDash\theta$. By definition, this
                             means that in every 
                             model $\mathcal{M}$, (a) if $\mathcal{M}\vDash
                             \phi$, then $\mathcal{M}\vDash \psi$ and (b)
                             if $\mathcal{M}\vDash \psi$, then
                             $\mathcal{M}\vDash\theta$. I want to
-                            derive $\phi\vDash\psi$, i.e. for every
+                            derive $\phi\vDash\theta$, i.e. for every
                             model $\mathcal{M}$,
                             such that $\mathcal{M}\vDash\phi$, we also
-                            have $\mathcal{M}\vDash\psi$. But if
+                            have $\mathcal{M}\vDash\theta$. But if
                             $\mathcal{M}\vDash\phi$, then by (a)
                             $\mathcal{M}\vDash\psi$, and then by (b)
-                            $\mathcal{M}\vDash\psi$, as desired. Now,
+                            $\mathcal{M}\vDash\theta$, as desired. Now,
                             to prove our initial claim, suppose that
-                            $\phi\vdash\psi$ and $\psi\vdash\phi$. By
+                            $\phi\vdash\psi$ and $\psi\vdash\theta$. By
                             soundness, I have that  $\phi\vDash\psi$
-                            and $\psi\vDash\phi$. So, by my (Lemma), we
+                            and $\psi\vDash\theta$. So, by my (Lemma), we
                             have $\phi\vDash\theta$. But then, by
                             completeness, we have $\phi\vdash\theta$,
                             as desired.
