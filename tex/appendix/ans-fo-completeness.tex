@@ -189,7 +189,7 @@ close with=\xmark
                           [{P(p)\to Q(p)}
                              [{\neg P(p)}, close ]
                              [{Q(p)}
-                                [{\neg Q(c)}, close]
+                                [{Q(c)}, close]
                              ]
                           ]      
                        ]
@@ -535,8 +535,8 @@ Hence the tableau is always closed, which is what we needed to show.
 
                     Now, consider the model $\mathcal{M}^-$ given by:
                     \begin{itemize}
-                    \item $D^{\mathcal{M}^+}=\{\ast\}$
-                    \item $R^{\mathcal{M}^+}=\emptyset$
+                    \item $D^{\mathcal{M}^-}=\{\ast\}$
+                    \item $R^{\mathcal{M}^-}=\emptyset$
                     \end{itemize}
                    As in the case of $\mathcal{M}^+$, we can infer
                    that $\mathcal{M}^-,\alpha\vDash
@@ -690,7 +690,7 @@ Hence the tableau is always closed, which is what we needed to show.
                     $\phi$ with only $x$ free, $(\phi)[x:=c]$ is a
                     sentence.
 
-                    \item We're essentially asked to show that for all
+                    \item[11.7.8] We're essentially asked to show that for all
                       models $\mathcal{M}$ and assignments $\alpha$,
                       we have 
                       $\mathcal{M},\alpha\vDash \forall xR(x,x)$ iff
@@ -735,21 +735,21 @@ Hence the tableau is always closed, which is what we needed to show.
                         x\rrbracket^\mathcal{M}_{\alpha[x\mapsto
                           d]})=(d,d)\in R^\mathcal{M}$. 
 
-                        \item[11.7.9]. We're asked to show that in the
+                        \item[11.7.9] We're asked to show that in the
                           given model $\mathcal{M}$ we have
                           \[\mathcal{M},\alpha\vDash \exists xP(x)\to
-                          P(a)\lor P(b)\lor P(b)\] for each
+                          P(a)\lor P(b)\lor P(c)\] for each
                           $\alpha$. We know that, by definition, $\mathcal{M},\alpha\vDash \exists xP(x)\to
-                          P(a)\lor P(b)\lor P(b)$ iff either (i)
+                          P(a)\lor P(b)\lor P(c)$ iff either (i)
                           $\mathcal{M},\alpha\nvDash \exists xP(x)$ or (ii)
                           $\mathcal{M},\alpha\vDash
-                          P(a)\lor P(b)\lor P(b)$. Now clearly, we
+                          P(a)\lor P(b)\lor P(c)$. Now clearly, we
                           either have (a) $\mathcal{M},\alpha\vDash
                           \exists xP(x)$ or (b)
                           $\mathcal{M},\alpha\nvDash \exists xP(x)$ by
                           bivalence. In case (b), we can immediately
                           infer that $\mathcal{M},\alpha\vDash \exists xP(x)\to
-                          P(a)\lor P(b)\lor P(b)$, so we focus on case
+                          P(a)\lor P(b)\lor P(c)$, so we focus on case
                           (a). Suppose that $\mathcal{M},\alpha\vDash
                           \exists xP(x)$. This means, by definition,
                           that there exists a $d\in D^\mathcal{M}$
@@ -766,11 +766,11 @@ Hence the tableau is always closed, which is what we needed to show.
                            P(a)$. But if $\mathcal{M},\alpha\vDash 
                            P(a)$, then $\mathcal{M},\alpha\vDash 
                            P(a)\lor P(b)\lor P(c)$ and so $\mathcal{M},\alpha\vDash \exists xP(x)\to
-                          P(a)\lor P(b)\lor P(b)$ by (ii), as
+                          P(a)\lor P(b)\lor P(c)$ by (ii), as
                           desired. If $d=2,3$, we can give the same,
                           analogous argument using the denotation
                           lemma. So, either way,  $\mathcal{M},\alpha\vDash \exists xP(x)\to
-                          P(a)\lor P(b)\lor P(b)$, as desired.
+                          P(a)\lor P(b)\lor P(c)$, as desired.
 
                           \item[11.7.10] We're asked to prove that if
                             $\phi\vdash\psi$ and $\psi\vdash\phi$,
