@@ -189,7 +189,7 @@ close with=\xmark
                           [{P(p)\to Q(p)}
                              [{\neg P(p)}, close ]
                              [{Q(p)}
-                                [{\neg Q(c)}, close]
+                                [{Q(c)}, close]
                              ]
                           ]      
                        ]
@@ -535,8 +535,8 @@ Hence the tableau is always closed, which is what we needed to show.
 
                     Now, consider the model $\mathcal{M}^-$ given by:
                     \begin{itemize}
-                    \item $D^{\mathcal{M}^+}=\{\ast\}$
-                    \item $R^{\mathcal{M}^+}=\emptyset$
+                    \item $D^{\mathcal{M}^-}=\{\ast\}$
+                    \item $R^{\mathcal{M}^-}=\emptyset$
                     \end{itemize}
                    As in the case of $\mathcal{M}^+$, we can infer
                    that $\mathcal{M}^-,\alpha\vDash
@@ -690,7 +690,7 @@ Hence the tableau is always closed, which is what we needed to show.
                     $\phi$ with only $x$ free, $(\phi)[x:=c]$ is a
                     sentence.
 
-                    \item We're essentially asked to show that for all
+                    \item[11.7.8] We're essentially asked to show that for all
                       models $\mathcal{M}$ and assignments $\alpha$,
                       we have 
                       $\mathcal{M},\alpha\vDash \forall xR(x,x)$ iff
@@ -735,7 +735,7 @@ Hence the tableau is always closed, which is what we needed to show.
                         x\rrbracket^\mathcal{M}_{\alpha[x\mapsto
                           d]})=(d,d)\in R^\mathcal{M}$. 
 
-                        \item[11.7.9]. We're asked to show that in the
+                        \item[11.7.9] We're asked to show that in the
                           given model $\mathcal{M}$ we have
                           \[\mathcal{M},\alpha\vDash \exists xP(x)\to
                           P(a)\lor P(b)\lor P(b)\] for each
